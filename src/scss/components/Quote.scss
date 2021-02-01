@@ -1,0 +1,158 @@
+.quote__container {
+    height: calc(100vh - 57px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    .card__body {
+        width: 600px;
+        margin: 20px;
+
+        .card__data {
+            border: 1px solid #2b3237;
+            border-radius: 10px;
+            min-height: 312px;
+            max-height: fit-content;
+            padding: 30px;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+
+            .loader__container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 250px;
+
+                .loader {
+                    border: 5px solid #f3f3f3;
+                    border-radius: 50%;
+                    border-top: 5px solid #3498db;
+                    width: 60px;
+                    height: 60px;
+                    -webkit-animation: spin 2s linear infinite;
+                    animation: spin 2s linear infinite;
+                }
+
+                @-webkit-keyframes spin {
+                    0% {
+                        -webkit-transform: rotate(0deg);
+                    }
+                    100% {
+                        -webkit-transform: rotate(360deg);
+                    }
+                }
+
+                @keyframes spin {
+                    0% {
+                        transform: rotate(0deg);
+                    }
+                    100% {
+                        transform: rotate(360deg);
+                    }
+                }
+            }
+        }
+
+        .button__container {
+            display: flex;
+            flex-flow: column;
+
+            .share_btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+
+                a {
+                    margin: 0 10px;
+                    text-decoration: none;
+
+                    i {
+                        font-size: 25px;
+                    }
+
+                    .fa-twitter {
+                        color: #1d9cea;
+                    }
+
+                    .fa-whatsapp {
+                        color: var(--green);
+                    }
+                }
+            }
+
+            .nav_btn {
+                display: flex;
+                margin: 20px 0;
+                justify-content: space-evenly;
+                font-family: "Open Sans", sans-serif;
+                font-size: 15px;
+
+                button {
+                    border: none;
+                    background: #0c65d6;
+                    color: #ffffff;
+                    border-radius: 6px;
+                    padding: 7px 20px;
+                    box-shadow: 0px 0px 0px transparent;
+                    text-shadow: 0px 0px 0px transparent;
+                    cursor: pointer;
+                }
+
+                button:disabled {
+                    background: #92bbf4;
+                    cursor: no-drop;
+                }
+
+                button:hover {
+                    background: #0c65d6;
+                    box-shadow: 0px 0px 0px transparent;
+                    border: 0px solid transparent;
+                    text-shadow: 0px 0px 0px transparent;
+                }
+
+                button:hover:disabled {
+                    background: #92bbf4;
+                    cursor: no-drop;
+                }
+
+                button:active {
+                    outline: none;
+                    border: none;
+                    background: #92bbf4;
+                }
+
+                button:focus {
+                    outline: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .quote__container {
+        align-items: unset;
+
+        .card__body {
+            .button__container {
+                .share_btn {
+                    a {
+                        i {
+                            font-size: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.quote__container::-webkit-scrollbar {
+    display: none;
+}
