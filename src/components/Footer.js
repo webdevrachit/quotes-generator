@@ -16,11 +16,11 @@ const Footer = () => {
                     by{" "}
                 </div>
                 <a
-                    href="https://www.arccoder.in"
+                    href="github.com/webdevrachit"
                     target="_blank"
                     rel="noreferrer"
                 >
-                    Arc Coder | Harsh Patel
+                    Rachit Tandon
                 </a>
             </div>
         </div>
